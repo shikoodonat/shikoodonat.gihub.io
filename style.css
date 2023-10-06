@@ -1,0 +1,731 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    height: 10000px;
+}
+
+nav {
+    background-color: inherit;
+    height: 25px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+
+.logo {
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 38px;
+    background-image: url('shinkoo.png');
+    width: 70px;
+    padding: 10px;
+    height: 20px;
+    top: 18px;
+    background-size: cover;
+    background-position: center;
+}
+
+.brandteks a{
+    margin-left: 140px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: rgb(218, 111, 35);
+    text-decoration: none;
+}
+
+/* Tambahkan transisi untuk animasi */
+.navlist ul li {
+    /* background-color: aquamarine; */
+    color: white;
+    padding-top: 15px;
+    padding-left: 30px;
+    position: relative;
+    right: 40px;
+    top: -10px;
+    transition: transform 0.2s ease; /* Animasi transformasi */
+}
+
+/* Animasi saat di-hover */
+.navlist ul li:hover {
+    color: burlywood;
+    transform: translateY(3px); /* Bergerak ke bawah 5px saat di-hover */
+}
+
+
+.navlist ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.navlist ul li {
+    padding-left: 30px;
+    position: relative;
+    right: 40px;
+}
+
+.navlist ul li:hover {
+    color: chocolate;
+}
+
+/* Hapus dekorasi default untuk tautan */
+.navlist ul li a {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: inherit; /* Menghapus warna biru, mengikuti warna teks kontainer */
+    cursor: pointer;
+    
+}
+
+.navlist ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posisikan submenu di bawah elemen yang dipilih */
+    left: 0;
+    width: 200px;
+    /* background-color: rgb(88, 88, 88); */
+    padding-top: 5px;
+}
+
+.navlist ul li:hover ul {
+    display: block;
+}
+
+.navlist ul li ul li a::content{
+    content: '';
+    background-color: black;
+    width: 200px;
+    height: 200px;
+}
+
+.navlist ul li ul li a{
+    color: rgb(255, 255, 255);
+    /* border: solid rgb(255, 255, 255) 1px; */
+    border-radius: 10px;
+    /* background-color: blueviolet; */
+    display: block;
+    padding: 10px 10px;
+    margin-top: 5px;
+    position: relative;
+    right: 10px;
+    top: 0px;
+    margin-top: -5px;
+}
+
+.navlist ul li ul li a:hover {
+    color: chocolate;
+    /* border: solid chocolate 1px; */
+}
+
+section {
+    background-image: url('bg\ donot.jpg'); /* Ganti 'gambar-latar.jpg' dengan URL gambar latar belakang Anda */
+    background-size: cover; /* Untuk mengisi seluruh area latar belakang */
+    background-position: center; /* Posisi gambar di tengah */
+    height: 800px;
+    position: relative;
+    top: -80px;
+    /* box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.7); */
+    
+}
+
+section a {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 540px;
+    left: 155px;
+    border: solid 2px white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: color 0.4 ease;
+    font-weight: 500;
+}
+
+section a:hover {
+    background-color: white;
+    color: black;
+}
+
+.teksawal {
+    margin-left: 150px;
+    margin-top: 320px;
+    position: absolute;
+    font-size: 70px;
+    line-height: 65px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 20px rgba(187, 126, 244, 0.3);
+    /* border: 1px solid black; */
+}
+
+.teksprodukawal {
+    color: rgb(168, 81, 18);
+    font-weight: bold;
+    margin-left: 530px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 50px; /* Mengatur padding agar border tidak terlalu besar */
+    border: 2px solid rgb(109, 50, 8); /* Mengatur border */
+    display: inline-block;
+    line-height: 10px;
+    padding-bottom: 20px;
+    border-radius: 50px;
+}
+
+.teksprodukawal h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.teksprodukawal p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* iki produk siji lekk */
+.produk1 {
+    width: 300px;
+    height: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 199, 88) 65%, rgb(255, 255, 255) 65%);
+    margin-left: 80px;
+    margin-top: 150px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    /* border: 5px solid rgb(164, 91, 52); */
+    transition: box-shadow 0.2s ease ;
+}
+
+.produk1:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgb(255, 221, 0) 65%, rgb(255, 255, 255) 65%);
+}
+
+.produk1:hover .gambar {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.shiko {
+    width: 100px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+
+.gambar {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.teksproduk {
+    color: rgb(0, 0, 0);
+}
+
+.teksproduk h1 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.teksproduk p {
+    /* background-color: blueviolet; */
+    width: 260px;
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: brown;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(72, 26, 26);
+    box-shadow: 0px 15px 20px -12px rgba(0, 0, 0, 1);
+}
+
+.harga {
+    position: absolute;
+    background-color: brown;
+    width: 94px;
+    height: 28px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 170px;
+    border-radius: 5px 8px 0px 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+
+
+/* Produk 2 */
+.produk2 {
+    width: 300px;
+    height: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 199, 88) 65%, rgb(255, 255, 255) 65%);
+    margin-left: 440px;
+    margin-top: -450px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    /* border: 5px solid rgb(164, 91, 52); */
+    transition: box-shadow 0.2s ease;
+}
+
+.produk2:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgb(255, 221, 0) 65%, rgb(255, 255, 255) 65%);
+}
+
+.produk2:hover .gambar {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.shiko {
+    width: 100px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+
+.gambar {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.teksproduk {
+    color: rgb(0, 0, 0);
+}
+
+.teksproduk h1 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.teksproduk p {
+    /* background-color: blueviolet; */
+    width: 260px;
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: brown;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(72, 26, 26);
+    box-shadow: 0px 15px 20px -12px rgba(0, 0, 0, 1);
+}
+
+.harga {
+    position: absolute;
+    background-color: brown;
+    width: 94px;
+    height: 28px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 170px;
+    border-radius: 5px 8px 0px 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+/* Produk 3 */
+.produk3 {
+    /* position: absolute; */
+    width: 300px;
+    height: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 199, 88) 65%, rgb(255, 255, 255) 65%);
+    margin-left: 790px;
+    margin-top: -450px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    /* border: 5px solid rgb(164, 91, 52); */
+    transition: box-shadow 0.2s ease;
+}
+
+.produk3:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgb(255, 221, 0) 65%, rgb(255, 255, 255) 65%);
+}
+
+.produk3:hover .gambar {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.shiko {
+    width: 100px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+
+.gambar {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.teksproduk {
+    color: rgb(0, 0, 0);
+}
+
+.teksproduk h1 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.teksproduk p {
+    /* background-color: blueviolet; */
+    width: 260px;
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: brown;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(72, 26, 26);
+    box-shadow: 0px 15px 20px -12px rgba(0, 0, 0, 1);
+}
+
+.harga {
+    position: absolute;
+    background-color: brown;
+    width: 94px;
+    height: 28px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 170px;
+    border-radius: 5px 8px 0px 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+
+
+/* Product 4 */
+.produk4 {
+
+    width: 300px;
+    height: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 199, 88) 65%, rgb(255, 255, 255) 65%);
+    margin-left: 1150px;
+    margin-top: -450px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    /* border: 5px solid rgb(164, 91, 52); */
+    transition: box-shadow 0.2s ease;
+}
+
+.produk4:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+        background: linear-gradient(180deg, rgb(255, 221, 0) 65%, rgb(255, 255, 255) 65%);
+}
+
+.produk4:hover .gambar {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.shiko {
+    width: 100px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+
+.gambar {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.teksproduk {
+    color: rgb(0, 0, 0);
+}
+
+.teksproduk h1 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.teksproduk p {
+    /* background-color: blueviolet; */
+    width: 260px;
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: brown;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(72, 26, 26);
+    box-shadow: 0px 15px 20px -12px rgba(0, 0, 0, 1);
+}
+
+.harga {
+    position: absolute;
+    background-color: brown;
+    width: 94px;
+    height: 28px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 170px;
+    border-radius: 5px 8px 0px 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+/* Produk 5 */
+.produk5 {
+    /* position: absolute; */
+    width: 300px;
+    height: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 199, 88) 65%, rgb(255, 255, 255) 65%);
+    margin-left: 80px;
+    margin-top: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    /* border: 5px solid rgb(164, 91, 52); */
+    transition: box-shadow 0.2s ease;
+}
+
+.produk5:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgb(255, 221, 0) 65%, rgb(255, 255, 255) 65%);
+}
+
+.produk5:hover .gambar {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.shiko {
+    width: 100px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+
+.gambar {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.teksproduk {
+    color: rgb(0, 0, 0);
+}
+
+.teksproduk h1 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.teksproduk p {
+    /* background-color: blueviolet; */
+    width: 260px;
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: brown;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(72, 26, 26);
+    box-shadow: 0px 15px 20px -12px rgba(0, 0, 0, 1);
+}
+
+.harga {
+    position: absolute;
+    background-color: brown;
+    width: 94px;
+    height: 28px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 170px;
+    border-radius: 5px 8px 0px 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+
+
+/* Product 6 */
+.produk6 {
+
+    width: 300px;
+    height: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 199, 88) 65%, rgb(255, 255, 255) 65%);
+    margin-left: 440px;
+    margin-top: -450px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    /* border: 5px solid rgb(164, 91, 52); */
+    transition: box-shadow 0.2s ease;
+}
+
+.produk6:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+        background: linear-gradient(180deg, rgb(255, 221, 0) 65%, rgb(255, 255, 255) 65%);
+}
+
+.produk6:hover .gambar {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.shiko {
+    width: 100px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+
+.gambar {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.teksproduk {
+    color: rgb(0, 0, 0);
+}
+
+.teksproduk h1 {
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.teksproduk p {
+    /* background-color: blueviolet; */
+    width: 260px;
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    /* font-weight: bold; */
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: brown;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+    background-color: rgb(72, 26, 26);
+    box-shadow: 0px 15px 20px -12px rgba(0, 0, 0, 1);
+}
+
+.harga {
+    position: absolute;
+    background-color: brown;
+    width: 94px;
+    height: 28px;
+    color: white;
+    margin-top: 270px;
+    margin-left: 170px;
+    border-radius: 5px 8px 0px 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 18px;
+}
